@@ -11,7 +11,7 @@ function main()
 {
   
     //input
-    console.log("Hipster’s Local Vinyl Records - Customer Order Details");
+    console.log("Hipster’s Local Vinyl Records - Customer Order Details\n"); //add new line
     var custoName = readlineSync.question("Enter customer's name: ");
     var distance = readlineSync.question("Enter the distance in Kilometers for delivery: ");
     var cost = readlineSync.question("Enter the cost of cost of records purchased: ");
@@ -20,12 +20,14 @@ function main()
     var deliverCost = distance *15;
     var purchaseCost = cost *1.14; //plus tax
     var total = deliverCost + purchaseCost;
+    console.log("   "); //add new empty line
 
     //output
     console.log("Purchase summary for " + custoName);
-    console.log("Delivery Cost:" + " $ " + deliverCost);
-    console.log("Purchase Cost:" + " $ " + purchaseCost);
-    console.log("Total Cost   :" + " $ " + total);
+    console.log("Delivery Cost:" + " $ " + deliverCost.toFixed(2));
+    console.log("Purchase Cost:" + " $ " + purchaseCost.toFixed(2));
+    console.log("Total Cost   :" + " $ " + total.toFixed(2));
+    //add [.toFixed(#)] after #
 
 }
 
