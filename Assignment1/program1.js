@@ -1,7 +1,7 @@
 /*
 Author: Peiyu Huang
-Date: 
-Description: 
+Date: Sep 11/2023
+Description: Program 1 – Hipster's Local Vinyl Records
 */
 "use strict";
 var readlineSync = require("readline-sync");
