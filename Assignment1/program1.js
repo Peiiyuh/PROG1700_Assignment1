@@ -11,9 +11,9 @@ function main()
 {
     console.log("Hipster’s Local Vinyl Records - Customer Order Details");
     //input
-  var custoName = readlineSync.question("Enter customer's name");
-  var distance = readlineSync.question("Enter the distance in Kilometers for delivery");
-  var cost = readlineSync.question("Enter the cost of cost of records purchased");
+  var custoName = readlineSync.question("Enter customer's name:");
+  var distance = readlineSync.question("Enter the distance in Kilometers for delivery:");
+  var cost = readlineSync.question("Enter the cost of cost of records purchased:");
     //process
     var deliverCost = distance *15;
     var purchaseCost = cost *1.14;
