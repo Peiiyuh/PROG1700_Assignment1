@@ -22,7 +22,7 @@ function main()
     var talOns = numTon*35840 + numSto*224 + numLB*16 + numOns;
     var talKilo = talOns/35.274;
     var metTon = parseInt(talKilo/1000); //parseInt: switch string into integer
-    var kilos = 22;
+    var kilos = parseInt(talKilo%1000);
     var grams = 33;
     //output
     console.log("The metric weight is " + metTon + " metric tons, " + kilos + " kilos, and " + grams + " grams.");
