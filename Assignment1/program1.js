@@ -13,20 +13,23 @@ function main()
     //input
     console.log("Hipster’s Local Vinyl Records - Customer Order Details\n"); //add new line
     var custoName = readlineSync.question("Enter customer's name: ");
-    var distance = readlineSync.question("Enter the distance in Kilometers for delivery: ");
-    var cost = readlineSync.question("Enter the cost of cost of records purchased: ");
+    var distance = parseFloat(readlineSync.question("Enter the distance in Kilometers for delivery: ")); //distance may have decimal
+    var cost = parseFloat(readlineSync.question("Enter the cost of cost of records purchased: "));
+    //can readline add tofixed??
 
     //process
-    var deliverCost = distance *15;
-    var purchaseCost = cost *1.14; //plus tax
+    //not common use toFixed in the processing, mostly in the results in order to keep as many number as possible.
+    var deliverCost = distance * 15;
+    var purchaseCost = (cost * 1.14); //plus tax
     var total = deliverCost + purchaseCost;
     console.log("   "); //add new empty line
 
     //output
-    console.log("Purchase summary for " + custoName);
-    console.log("Delivery Cost:" + " $ " + deliverCost.toFixed(2));
-    console.log("Purchase Cost:" + " $ " + purchaseCost.toFixed(2));
-    console.log("Total Cost   :" + " $ " + total.toFixed(2));
+    //canadian dollar keep two number after decimal
+    console.log(`Purchase summary for ${custoName}`);
+    console.log(`Delivery Cost: $${deliverCost.toFixed(2)}`);
+    console.log(`Purchase Cost: $${purchaseCost.toFixed(2)}`);
+    console.log(`Total Cost : $${total.toFixed(2)}`);
     //add [.toFixed(#)] after #
 
 }
