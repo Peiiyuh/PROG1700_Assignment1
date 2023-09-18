@@ -11,10 +11,11 @@ function main()
 {
     //input
     //ensure the name after variable as simple as possible
+    //add parseInt take string return number
     console.log("Weekly Loan Caculator\n");
-    var aLoan = readlineSync.question("Enter the amount of loan: ");
-    var rRate = readlineSync.question("Enter the interest rate (%): ");
-    var nYears = readlineSync.question("Enter the number of years: ");
+    var aLoan = parseInt(readlineSync.question("Enter the amount of loan: "));
+    var rRate = parseInt(readlineSync.question("Enter the interest rate (%): "));
+    var nYears = parseInt(readlineSync.question("Enter the number of years: "));
     console.log('  ')
 
     //process
@@ -22,7 +23,8 @@ function main()
     let payWeek = rRate / 5200 * aLoan / (1-(1+rRate/5200)**(-52*nYears))
 
     //output
-    console.log("Your weekly payment will be: " + payWeek.toFixed(2));
+    //renew as ES6 Template
+    console.log(`Your weekly payment will be: ${payWeek.toFixed(2)}`);
 
 
 }
