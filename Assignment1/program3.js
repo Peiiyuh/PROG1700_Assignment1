@@ -12,11 +12,12 @@ function main()
 {
     console.log("Imperial To Metric Conversion\n");
     //input
-    //add parseInt to take string return to number!!
-    var numTon = parseInt(readlineSync.question("Enter the numebr of tons: "));
-    var numSto = parseInt(readlineSync.question("Enter the number of stone: "));
-    var numLB = parseInt(readlineSync.question("Enter the number of pounds: "));
-    var numOns = parseInt(readlineSync.question("Enter the number of ounces: "));
+    //add parse*** to take string return to number!!
+    //cannot use parseInt but Float to increase the accuracy
+    var numTon = parseFloat(readlineSync.question("Enter the numebr of tons: "));
+    var numSto = parseFloat(readlineSync.question("Enter the number of stone: "));
+    var numLB = parseFloat(readlineSync.question("Enter the number of pounds: "));
+    var numOns = parseFloat(readlineSync.question("Enter the number of ounces: "));
     console.log("    ")
 
     //proces
