@@ -11,11 +11,13 @@ function main()
 {
     //input
     //ensure the name after variable as simple as possible
-    //add parseInt take string return number
+    //add parse*** to take string return to number!!
+    //cannot use parseInt but Float to increase the accuracy
     console.log("Weekly Loan Caculator\n");
-    var aLoan = parseInt(readlineSync.question("Enter the amount of loan: "));
-    var rRate = parseInt(readlineSync.question("Enter the interest rate (%): "));
+    var aLoan = parseFloat(readlineSync.question("Enter the amount of loan: "));
+    var rRate = parseFloat(readlineSync.question("Enter the interest rate (%): "));
     var nYears = parseInt(readlineSync.question("Enter the number of years: "));
+    //years can only be integer
     console.log('  ')
 
     //process
